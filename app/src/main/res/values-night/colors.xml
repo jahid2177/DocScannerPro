@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface_white">#121417</color>
+    <color name="surface_soft">#1D2127</color>
+    <color name="text_primary">#F5F7FA</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="divider">#2A2E35</color>
+    <color name="brand_blue_light">#1A2740</color>
+</resources>

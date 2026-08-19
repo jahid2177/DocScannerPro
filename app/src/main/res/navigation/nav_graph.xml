@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.scanner.pro.ui.home.HomeFragment"
+        android:label="Home">
+        <action android:id="@+id/action_home_to_scanner" app:destination="@id/scannerFragment" />
+        <action android:id="@+id/action_home_to_viewer" app:destination="@id/viewerFragment" />
+        <action android:id="@+id/action_home_to_settings" app:destination="@id/settingsFragment" />
+        <action android:id="@+id/action_home_to_about" app:destination="@id/aboutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.scanner.pro.ui.scanner.ScannerFragment"
+        android:label="Scan">
+        <action android:id="@+id/action_scanner_to_crop" app:destination="@id/cropFragment" />
+        <action android:id="@+id/action_scanner_to_viewer" app:destination="@id/viewerFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cropFragment"
+        android:name="com.scanner.pro.ui.crop.CropFragment"
+        android:label="Crop">
+        <action android:id="@+id/action_crop_to_scanner" app:destination="@id/scannerFragment"
+            app:popUpTo="@id/scannerFragment" app:popUpToInclusive="true" />
+        <action android:id="@+id/action_crop_to_filter" app:destination="@id/filterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.scanner.pro.ui.filters.FilterFragment"
+        android:label="Filters">
+        <action android:id="@+id/action_filter_to_viewer" app:destination="@id/viewerFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action android:id="@+id/action_filter_to_scanner" app:destination="@id/scannerFragment"
+            app:popUpTo="@id/scannerFragment" app:popUpToInclusive="true" />
+        <action android:id="@+id/action_filter_to_crop" app:destination="@id/cropFragment" />
+        <action android:id="@+id/action_filter_to_ocr" app:destination="@id/ocrFragment" />
+        <action android:id="@+id/action_filter_to_manage_pages" app:destination="@id/managePagesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/managePagesFragment"
+        android:name="com.scanner.pro.ui.managepages.ManagePagesFragment"
+        android:label="Manage Pages">
+        <argument android:name="documentId" app:argType="string" app:nullable="true" android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewerFragment"
+        android:name="com.scanner.pro.ui.viewer.ViewerFragment"
+        android:label="Document">
+        <argument android:name="documentId" app:argType="string" />
+        <action android:id="@+id/action_viewer_to_scanner" app:destination="@id/scannerFragment" />
+        <action android:id="@+id/action_viewer_to_crop" app:destination="@id/cropFragment" />
+        <action android:id="@+id/action_viewer_to_ocr" app:destination="@id/ocrFragment" />
+        <action android:id="@+id/action_viewer_to_pdf_preview" app:destination="@id/pdfPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ocrFragment"
+        android:name="com.scanner.pro.ui.ocr.OcrFragment"
+        android:label="Extract Text" />
+
+    <fragment
+        android:id="@+id/pdfPreviewFragment"
+        android:name="com.scanner.pro.ui.pdf.PdfPreviewFragment"
+        android:label="PDF Preview" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.scanner.pro.ui.settings.SettingsFragment"
+        android:label="Settings" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.scanner.pro.ui.about.AboutFragment"
+        android:label="About" />
+
+</navigation>

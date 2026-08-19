@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_soft">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/surface_white"
+        android:title="@string/settings"
+        app:navigationIcon="@drawable/ic_close"
+        app:titleTextColor="@color/text_primary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout style="@style/RoundedCard" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_auto_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Auto save scans" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_auto_capture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Auto capture when stable" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_pdf_compression"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Compress PDFs by default" />
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="Image quality" android:textColor="@color/text_secondary" />
+            <SeekBar android:id="@+id/seek_quality" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:max="90" android:min="10" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="Default filter" android:textColor="@color/text_secondary" />
+            <Spinner android:id="@+id/spinner_default_filter" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="OCR language" android:textColor="@color/text_secondary" />
+            <Spinner android:id="@+id/spinner_ocr_language" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="Theme" android:textColor="@color/text_secondary" />
+            <RadioGroup android:id="@+id/theme_group" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/theme_light" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Light" />
+                <RadioButton android:id="@+id/theme_dark" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Dark" />
+                <RadioButton android:id="@+id/theme_system" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="System" android:checked="true" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

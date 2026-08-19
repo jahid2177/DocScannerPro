@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface_white"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/sheet_doc_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_quality"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quality: Medium"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/surface_soft" />
+
+    <LinearLayout
+        android:id="@+id/action_share_pdf"
+        style="@style/ExportSheetRow">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_import_pdf"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            style="@style/ExportSheetRowText"
+            android:text="Share PDF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_save_device"
+        style="@style/ExportSheetRow">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_send"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            style="@style/ExportSheetRowText"
+            android:text="Save to device" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_share_images"
+        style="@style/ExportSheetRow">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_gallery"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            style="@style/ExportSheetRowText"
+            android:text="Share images" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_delete_all"
+        style="@style/ExportSheetRow">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_delete"
+            app:tint="#E53935" />
+
+        <TextView
+            style="@style/ExportSheetRowText"
+            android:text="Delete All"
+            android:textColor="#E53935" />
+    </LinearLayout>
+
+</LinearLayout>

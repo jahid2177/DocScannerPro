@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingVertical="10dp">
+
+    <FrameLayout
+        android:id="@+id/thumb_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/bg_filter_thumb"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/page_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:minHeight="220dp"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/selected_check"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_checkmark_button"
+            android:padding="4dp"
+            android:src="@drawable/ic_check_plain"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/page_number_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_page_number_badge"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="3dp"
+        android:textColor="@color/editor_bg"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>

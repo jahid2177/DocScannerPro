@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_blue">#2979FF</color>
+    <color name="brand_blue_dark">#1A56DB</color>
+    <color name="brand_blue_light">#E8F0FE</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="surface_soft">#F5F7FA</color>
+    <color name="text_primary">#1A1D29</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="divider">#E5E7EB</color>
+    <color name="error_red">#E53935</color>
+    <color name="success_green">#2E7D32</color>
+    <color name="amber_searching">#FFC107</color>
+    <color name="black_overlay">#B3000000</color>
+
+    <!-- Dark "page editor" / "manage pages" screens (CamScanner-style) -->
+    <color name="editor_bg">#121212</color>
+    <color name="editor_surface">#1E1E1E</color>
+    <color name="editor_surface_raised">#282828</color>
+    <color name="editor_divider">#33FFFFFF</color>
+    <color name="editor_text_secondary">#B3FFFFFF</color>
+    <color name="accent_teal">#1DE9B6</color>
+    <color name="accent_teal_dark">#00BFA5</color>
+</resources>
